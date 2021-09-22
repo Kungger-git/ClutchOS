@@ -1,0 +1,28 @@
+#!/bin/env bash
+
+# A simple link shortcut script
+# Created by: (@Kungger)
+
+declare -A links=(
+["DuckDuckGo"]="start.duckduckgo.com"
+["Arch Linux"]="archlinux.org"
+["GitHub"]="github.com/login"
+["GitLab"]="gitlab.com/"
+["Creator"]="github.com/KungPaoChick"
+["Suckless"]="suckless.org"
+["Gmail"]="mail.google.com/"
+["Reddit"]="reddit.com/login"
+["Linkedin"]="linkedin.com/login"
+["Facebook Messenger"]="messenger.com/login"
+["Facebook"]="facebook.com/login"
+["YouTube"]="youtube.com"
+)
+
+choice=$(printf '%s\n' "${!links[@]}" | sort -u | dmenu -c -i -l 10 -nb '#2C2439' -sb '#3D3250' -sf '#C4C7C5' -fn 'Source Code Pro Medium' -p 'Quick Links:')
+
+# opens the link using default browser.. make sure you installed one :)
+if [ "$choice" ]; then
+    xdg-open "https://${links[$choice]}"
+else
+    echo "Exiting..."; exit 1
+fi

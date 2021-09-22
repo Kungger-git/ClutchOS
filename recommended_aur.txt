@@ -1,0 +1,12 @@
+bash-pipes
+cava
+colorpicker
+i3lock-color
+minecraft-launcher
+pfetch
+shell-color-scripts
+toilet
+tty-clock
+unimatrix-git
+visual-studio-code-bin
+xfce-polkit
