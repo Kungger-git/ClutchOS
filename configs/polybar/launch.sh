@@ -24,16 +24,11 @@ launch_bar() {
 if [[ "$1" == "--forest" ]]; then
 	style="forest"
 	launch_bar
-
-elif [[ "$1" == "--pwidgets" ]]; then
-	style="pwidgets"
-	launch_bar
-
 else
 	cat <<- EOF
 	Usage : launch.sh --theme
 		
-	Available Themes :
-	--forest     --pwidgets
+	Available Theme/s :
+	--forest
 	EOF
 fi
