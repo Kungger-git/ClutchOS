@@ -35,7 +35,7 @@ control + alt {t}
 
 # Launch Apps
 super + shift + {f,w,c,d,s}
-    {pcmanfm,firefox,code,discord,spotify}
+    {thunar,firefox,code,discord,spotify}
 
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}

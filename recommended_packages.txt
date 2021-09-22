@@ -1,7 +1,6 @@
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 arandr
-archlinux-wallpaper
 bc
 bpytop
 calc
@@ -50,5 +49,4 @@ wget
 xclip
 xfce4-power-manager
 xfce4-settings
-xfce4-terminal
 youtube-dl

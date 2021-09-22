@@ -1,4 +1,3 @@
-
 adapta-gtk-theme
 alacritty
 base-devel
@@ -9,7 +8,6 @@ feh
 gcr
 lxdm-gtk3
 noto-fonts
-picom
 python-pip
 python-psutil
 qtile
