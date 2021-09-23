@@ -171,15 +171,24 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 # window layouts
 layouts = [
-    layout.MonadTall(margin=10, font="Source Code Pro Medium", font_size=10,
-                    border_focus="#B07190", border_width=3, border_normal="#2E3440"),
+    layout.MonadTall(
+        margin=10,
+        font="Source Code Pro Medium",
+        font_size=10,
+        border_width=3,
+        border_focus="#82dbf4",
+        border_normal="#0F131F"),
     # layout.Columns(border_focus_stack='#42A5F5'),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.Floating(border_focus='#B07190', border_width=3, border_normal="#2E3440"),
+    layout.Floating(
+        border_focus="#82dbf4",
+        border_width=3,
+        border_normal="#0F131F"
+    ),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -193,23 +202,20 @@ widget_defaults = dict(
     fontsize=12,
     padding=5,
 )
-nerd_icon_defaults = dict(
-    font='Iosevka Nerd Font',
-    fontsize=15
-)
 extension_defaults = widget_defaults.copy()
 
 # colors for the bar/widgets/panel
 def init_colors():
-    return [["#3D3250", "#3D3250"], # color 0 
-            ["#3D3250", "#3D3250"], # color 1
-            ["#C4C7C5", "#C4C7C5"], # color 2
-            ["#B07190", "#B07190"], # color 3
-            ["#BFBAAC", "#BFBAAC"], # color 4
-            ["#3466C2", "#3466C2"], # color 5
-            ["#E0B742", "#E0B742"], # color 6
-            ["#D56F6E", "#D56F6E"], # color 7
-            ["#68CB79", "#68CB79"]] # color 8
+    return [["#0F131F", "#0F131F"], # color 0 | bg
+            ["#0F131F", "#0F131F"], # color 1 | bg
+            ["#82dbf4", "#82dbf4"], # color 2 | fg
+            ["#F7A01D", "#F7A01D"], # color 3 | red
+            ["#F7A11D", "#F7A11D"], # color 4 | green
+            ["#1A6897", "#1A6897"], # color 5 | yellow
+            ["#548FAB", "#548FAB"], # color 6 | blue
+            ["#1798E5", "#1798E5"], # color 7 | magenta
+            ["#16B0F7", "#16B0F7"], # color 8 | cyan
+            ["#82dbf4", "#82dbf4"]] # color 9 | white
 
 colors = init_colors()
 
@@ -249,8 +255,8 @@ def init_widgets_list():
                 borderwidth = 8,
                 highlight_method = "text",
                 this_current_screen_border = colors[5],
-                active = colors[3],
-                inactive = colors[4]
+                active = colors[4],
+                inactive = colors[2]
             ),
             widget.Sep(
                 linewidth = 3,
@@ -455,7 +461,7 @@ def init_widgets_list():
 
 # screens/bar
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_list(), size=30, opacity=0.9, margin=[5,10,0,10]))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_list(), size=35, opacity=0.9, margin=[5,10,0,10]))]
 
 screens = init_screens()
 
