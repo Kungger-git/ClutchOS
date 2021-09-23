@@ -6,6 +6,11 @@ DEF_TERM="alacritty --config-file $HOME/.config/qtile/alacritty/alacritty.yml"
 # default editor
 DEF_EDITOR="vim"
 
+# colors and font
+BG="#0F131F"
+FG="#82dbf4"
+ALT_BG="#5b99aa"
+FONT="Source Code Pro Medium:size=12"
 
 # list of configs
 declare -a options=(
@@ -20,7 +25,7 @@ declare -a options=(
 )
 
 # creates the menu
-choice=$(printf '%s\n' "${options[@]}" | sort -u | dmenu -c -i -l 10 -nb '#2C2439' -sb '#3D3250' -sf '#C4C7C5' -fn 'Source Code Pro Medium' -p 'Edit Config:')
+choice=$(printf '%s\n' "${options[@]}" | sort -u | dmenu -c -i -l 10 -nb "$BG" -nf "$FG" -sb "$ALT_BG" -sf "$FG" -fn "$FONT" -p 'Edit Config:')
 
 # opens the selected config file with vim
 # exits otherwise
