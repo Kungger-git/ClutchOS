@@ -246,6 +246,9 @@ ${BOLD}##################################${RESET}"
     sudo cp -rf lxdm/lxdm-theme/* /usr/share/lxdm/themes/
     sudo plymouth-set-default-theme -R arch10
 
+    # xsessions
+    sudo cp -rf xsessions /usr/share/
+
     #
     # Now for the more important things, the dots & configs
     #
