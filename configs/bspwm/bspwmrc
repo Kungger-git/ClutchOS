@@ -66,8 +66,8 @@ killall -9 picom sxhkd dunst xfce4-power-manager
 # Launch notification daemon
 dunst \
 -geom "280x50-10+38" -frame_width "1" -font "Source Code Pro Medium 10" \
--lb "#05132DFF" -lf "#C4C7C5FF" -lfr "#42A5F5FF" \
--nb "#05132DFF" -nf "#C4C7C5FF" -nfr "#42A5F5FF" \
+-lb "#04142DFF" -lf "#eaccc4FF" -lfr "#42A5F5FF" \
+-nb "#04142DFF" -nf "#eaccc4FF" -nfr "#42A5F5FF" \
 -cb "#2E3440FF" -cf "#BF616AFF" -cfr "#BF616AFF" &
 
 # polkit agent

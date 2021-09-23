@@ -66,7 +66,7 @@ control + alt + w
     nitrogen --random --set-scaled /usr/share/backgrounds/
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill

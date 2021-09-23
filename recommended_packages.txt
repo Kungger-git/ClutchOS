@@ -2,7 +2,6 @@ adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 arandr
 bc
-bpytop
 calc
 cowfortune
 cowsay
