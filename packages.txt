@@ -3,11 +3,9 @@ alacritty
 base-devel
 bspwm
 curl
-dmenu
 feh
 gcr
 lxdm-gtk3
-noto-fonts
 python-pip
 python-psutil
 qtile
@@ -18,4 +16,3 @@ wget
 xdg-user-dirs
 xf86-input-libinput
 xorg
-xorg-xinit
