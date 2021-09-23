@@ -93,7 +93,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-i", "-m", dme
 static const char *j4dmenu[]  = { "j4-dmenu-desktop", "--no-generic", "--term='alacritty'", "--dmenu=dmenu -p 'Run App:' -c -i -l 10 -nb '#0B0930' -nf '#7dc8d0' -sb '#F70159' -sf '#7dc8d0' -fn 'Source Code Pro Medium:size=12'", NULL };
 static const char *termcmd[]  = { "alacritty", "--config-file=/home/kungger/.dwm/alacritty/alacritty.yml", "-e", "fish", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
-static const char *lockscreen[] = { "lock", NULL };
+static const char *lockscreen[] = { "./.dwm/scripts/lock", NULL };
 static const char *editconfigs[] = { "./.dwm/scripts/dmedit-configs", NULL };
 static const char *quicklinks[] = { "./.dwm/scripts/dmquick-links", NULL };
 static const char *rangercmd[] = { "alacritty", "-e", "ranger", NULL };
