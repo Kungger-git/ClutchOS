@@ -261,7 +261,8 @@ def init_widgets_list():
             widget.Sep(
                 linewidth = 3,
                 margin = 5,
-                background = colors[1]
+                background = colors[1],
+                foreground = colors[5]
             ),
             widget.Spacer(
                 length = 10,
@@ -321,7 +322,8 @@ def init_widgets_list():
             ),
             widget.Sep(
                 linewidth = 3,
-                background = colors[1] 
+                background = colors[1],
+                foreground = colors[5]
             ),
             widget.TextBox(
                 font = "Iosevka Nerd Font",
@@ -381,7 +383,8 @@ def init_widgets_list():
             ),
             widget.Sep(
                 linewidth = 3,
-                background = colors[1] 
+                background = colors[1],
+                foreground = colors[5]
             ),
             widget.TextBox(
                 font = "Iosevka Nerd Font",
@@ -422,7 +425,8 @@ def init_widgets_list():
             widget.Sep(
                 size_percent = 60,
                 linewidth = 3,
-                background = colors[1]
+                background = colors[1],
+                foreground = colors[5]
             ),
             widget.TextBox(
                 font = "Iosevka Nerd Font",
