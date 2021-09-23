@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-    alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e zsh
+    alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml
 
 # program launcher
 alt + F1

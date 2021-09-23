@@ -9,7 +9,6 @@ lxdm-gtk3
 python-pip
 python-psutil
 qtile
-rofi
 sxhkd
 webkit2gtk
 wget

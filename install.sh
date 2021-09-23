@@ -28,7 +28,6 @@ set_color() {
 }
 
 main() {
-    # TODO: finish this by tomorrow
     set_color
 
     # creates srcs folder
@@ -163,6 +162,9 @@ ${BOLD}##################################${RESET}"
 
     # installs required system packages
     sudo pacman -S --needed --noconfirm - < packages.txt
+
+    # installs a different version of rofi
+    sudo pacman -U --noconfirm https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rofi-1.6.1-1-x86_64.pkg.tar.zst
 
     #
     # Essential stuff, including: aur & other utility packages
