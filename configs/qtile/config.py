@@ -197,12 +197,6 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-widget_defaults = dict(
-    font='Source Code Pro Medium',
-    fontsize=12,
-    padding=5,
-)
-extension_defaults = widget_defaults.copy()
 
 # colors for the bar/widgets/panel
 def init_colors():
@@ -217,18 +211,45 @@ def init_colors():
             ["#16B0F7", "#16B0F7"], # color 8 | cyan
             ["#82dbf4", "#82dbf4"]] # color 9 | white
 
+def init_separator():
+    return widget.Sep(
+                size_percent = 60,
+                margin = 5, 
+                linewidth = 2,
+                background = colors[1],
+                foreground = colors[5])
+
+def nerd_icon(nerdfont_icon, fg_color):
+    return widget.TextBox(
+                font = "Iosevka Nerd Font",
+                fontsize = 15,
+                text = nerdfont_icon,
+                foreground = fg_color,
+                background = colors[1])
+
+def init_edge_spacer():
+    return widget.Spacer(
+                length = 5,
+                background = colors[1])
+
+
 colors = init_colors()
+sep = init_separator()
+space = init_edge_spacer()
+
+widget_defaults = dict(
+    font='Source Code Pro Medium',
+    fontsize=12,
+    padding=5,
+)
+extension_defaults = widget_defaults.copy()
 
 
 def init_widgets_list():
     widgets_list = [
-            widget.Spacer(
-                length = 2,
-                background = colors[1] 
-            ),
-            
             # Left Side of the bar
 
+            space,
             #widget.Image(
             #    filename = "/usr/share/pixmaps/archlinux-logo.png",
             #    background = colors[1],
@@ -258,44 +279,24 @@ def init_widgets_list():
                 active = colors[4],
                 inactive = colors[2]
             ),
-            widget.Sep(
-                linewidth = 3,
-                margin = 5,
-                background = colors[1],
-                foreground = colors[5]
-            ),
-            widget.Spacer(
-                length = 10,
-                background = colors[1]
-            ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[8],
-                background = colors[1]
-            ),
+            sep,
+            nerd_icon(
+                "  ",
+                colors[2]
+            ),        
             widget.Battery(
                 foreground = colors[2],
                 background = colors[1],
                 format = "{percent:2.0%}"
             ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "墳",
-                foreground = colors[4],
-                background = colors[1]
+            nerd_icon(
+                "墳",
+                colors[2]
             ),
             widget.Volume(
                 foreground = colors[2],
                 background = colors[1]
             ),
-            #widget.WindowName(
-            #    fontsize = 12,
-            #    foreground = colors[2],
-            #    background = colors[1]
-            #),
             widget.Spacer(
                 length = bar.STRETCH,
                 background = colors[1]
@@ -303,34 +304,18 @@ def init_widgets_list():
 
             # Center bar
 
-            #widget.PulseVolume(
-            #    background = colors[1],
-            #    foreground = colors[2],
-            #    emoji = True,
-            #    fontsize = 12
-            #),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[5],
-                background = colors[1]
+            nerd_icon(
+                "",
+                colors[2]
             ),
             widget.CurrentLayout(
                 foreground = colors[2],
                 background = colors[1] 
             ),
-            widget.Sep(
-                linewidth = 3,
-                background = colors[1],
-                foreground = colors[5]
-            ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "﬙",
-                foreground = colors[6],
-                background = colors[1]
+            sep,
+            nerd_icon(
+                "﬙",
+                colors[2]
             ),
             widget.CPU(
                 format = "{load_percent}%",
@@ -341,12 +326,9 @@ def init_widgets_list():
                     'Button1': lambda : qtile.cmd_spawn(f"{terminal} -e gtop")
                 }
             ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[5],
-                background = colors[1]
+            nerd_icon(
+                "",
+                colors[2]
             ),
             widget.Memory(
                 format = "{MemUsed:.0f}{mm}",
@@ -357,21 +339,10 @@ def init_widgets_list():
                     'Button1': lambda : qtile.cmd_spawn(f"{terminal} -e gtop")
                 }
             ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text= "",
-                foreground = colors[7],
-                background = colors[1]
+            nerd_icon(
+                "",
+                colors[2]
             ),
-            #widget.HDDGraph(
-            #    type = 'box',
-            #    foreground = colors[2],
-            #    background = colors[1],
-            #    mouse_callbacks = {
-            #        'Button1': lambda : qtile.cmd_spawn(f"{terminal} -e gtop")
-            #    }
-            #),
             widget.GenPollText(
                 foreground = colors[2],
                 background = colors[1],
@@ -381,17 +352,10 @@ def init_widgets_list():
                     'Button1': lambda : qtile.cmd_spawn(f"{terminal} -e gtop")
                 }
             ),
-            widget.Sep(
-                linewidth = 3,
-                background = colors[1],
-                foreground = colors[5]
-            ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[8],
-                background = colors[1]
+            sep,
+            nerd_icon(
+                "",
+                colors[2]
             ),
             widget.GenPollText(
                 foreground = colors[2],
@@ -406,12 +370,9 @@ def init_widgets_list():
                 length = bar.STRETCH,
                 background = colors[1]
             ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[5],
-                background = colors[1]
+            nerd_icon(
+                "",
+                colors[2]
             ),
             widget.Net(
                 format = "{down} ↓↑ {up}",
@@ -422,30 +383,19 @@ def init_widgets_list():
                     'Button1': lambda : qtile.cmd_spawn(f"networkmanager_dmenu {dmenu_conf}")
                 }
             ),
-            widget.Sep(
-                size_percent = 60,
-                linewidth = 3,
-                background = colors[1],
-                foreground = colors[5]
-            ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[7],
-                background = colors[1]
+            sep,
+            nerd_icon(
+                "",
+                colors[2]
             ),
             widget.Clock(
                 format = '%b %d-%Y',
                 foreground = colors[2],
                 background = colors[1]
             ),
-            widget.TextBox(
-                font = "Iosevka Nerd Font",
-                fontsize = 15,
-                text = "",
-                foreground = colors[7],
-                background = colors[1]
+            nerd_icon(
+                "",
+                colors[2]
             ),
             widget.Clock(
                 format = '%I:%M:%S %p',
@@ -455,10 +405,7 @@ def init_widgets_list():
             widget.Systray(
                 background = colors[1] 
             ),
-            widget.Spacer(
-                length = 5,
-                background = colors[1] 
-            )
+            space
         ]
     return widgets_list
 
