@@ -4,9 +4,9 @@
 # Created by: (@Kungger)
 
 # colors and font
-BG="#0B0930"
-FG="#7dc8d0"
-ALT_BG="#F70159"
+BG="#0b0d0a"
+FG="#d2e9f0"
+ALT_BG="#93a3a8"
 FONT="Source Code Pro Medium:size=12"
 
 # list of sites
