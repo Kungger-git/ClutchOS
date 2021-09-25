@@ -89,8 +89,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", "#0B0930", "-nf", "#7dc8d0", "-sb", "#F70159", "-sf", "#7dc8d0", "-p", "Run Command:", NULL };
-static const char *j4dmenu[]  = { "j4-dmenu-desktop", "--no-generic", "--term='alacritty'", "--dmenu=dmenu -p 'Run App:' -c -i -l 10 -nb '#0B0930' -nf '#7dc8d0' -sb '#F70159' -sf '#7dc8d0' -fn 'Source Code Pro Medium:size=12'", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", "#0b0d0a", "-nf", "#d2e9f0", "-sb", "#93a3a8", "-sf", "#d2e9f0", "-p", "Run Command:", NULL };
+static const char *j4dmenu[]  = { "j4-dmenu-desktop", "--no-generic", "--term='alacritty'", "--dmenu=dmenu -p 'Run App:' -c -i -l 10 -nb '#0b0d0a' -nf '#d2e9f0' -sb '#93a3a8' -sf '#d2e9f0' -fn 'Source Code Pro Medium:size=12'", NULL };
 static const char *termcmd[]  = { "alacritty", "--config-file=/home/kungger/.dwm/alacritty/alacritty.yml", "-e", "fish", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *lockscreen[] = { "./.dwm/scripts/lock", NULL };
