@@ -28,5 +28,8 @@ if [[ ! `pidof xfce-polkit` ]]; then
     /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
+# start mpd
+exec mpd &
+
 # Start udiskie
 udiskie &
