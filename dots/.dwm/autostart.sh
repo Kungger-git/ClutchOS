@@ -18,7 +18,7 @@ dunst \
 
 # start compositor and power manager
 xfce4-power-manager &
-picom --config $HOME/.dwm/picom.conf &
+picom --config $HOME/.config/picom.conf &
 
 # start polkit
 if [[ ! `pidof xfce-polkit` ]]; then

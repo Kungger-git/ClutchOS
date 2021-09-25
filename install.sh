@@ -262,15 +262,15 @@ ${BOLD}##################################${RESET}"
     case $comp in
     [1])
             sudo pacman -S --needed --noconfirm picom &&
-            cp -r compositors/default/ $HOME/.config/picom
+            cp -f compositors/default/picom.conf $HOME/.config/
             ;;
     [2])
             $HELPER -S --needed --noconfirm picom-jonaburg-git &&
-            cp -r compositors/jonaburg/ $HOME/.config/picom
+            cp -r compositors/jonaburg/picom.conf $HOME/.config/
             ;;
     *)
             sudo pacman -S --needed --noconfirm picom &&
-            cp -r compositors/default/ $HOME/.config/picom
+            cp -r compositors/default/picom.conf $HOME/.config/
             ;;
     esac
 
