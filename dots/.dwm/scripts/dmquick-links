@@ -23,6 +23,7 @@ declare -A links=(
 ["Facebook Messenger"]="messenger.com/login"
 ["Facebook"]="facebook.com/login"
 ["YouTube"]="youtube.com"
+["WallpaperFlare"]="wallpaperflare.com"
 )
 
 choice=$(printf '%s\n' "${!links[@]}" | sort -u | dmenu -c -i -l 10 -nb "$BG" -nf "$FG" -sb "$ALT_BG" -sf "$FG" -fn "$FONT" -p 'Quick Links:')
