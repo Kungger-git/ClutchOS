@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
 
@@ -116,7 +113,7 @@ handle_image() {
              # Thumbnail
              ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
              exit 1;;
-        
+
         # PDF
         application/pdf)
              pdftoppm -f 1 -l 1 \
